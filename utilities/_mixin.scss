@@ -1,0 +1,42 @@
+
+@mixin titulosPrincipalesCel {
+    padding: 0.5rem;
+    margin: 0.5rem;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    background-color: $color-titulos;
+    text-align: center;
+}
+@mixin subtitulosCel {
+    padding: 0.2rem;
+    margin: 0.2rem;
+    font-size: 1.3rem;
+    background-color: $color-subtitulos;
+    text-transform: uppercase;
+}
+@mixin listaDescripcion {
+    margin: 0.5rem;
+    padding: 0.5rem;
+    list-style-position: inside;
+    list-style-type: square;
+    font-size: 1rem;      
+    list-style-type: disc;
+    
+}
+
+@mixin titulosPrincipalesPc {
+    padding: 0.8rem;
+    margin: 0.8rem;
+    font-size: 2.3rem;
+}
+
+@mixin subtitulospc {
+    padding: 0.5rem;
+    margin: 0.5rem;
+    font-size: 2rem;
+}
+
+@mixin listaDescripcionPc {
+    font-size: 1.5rem;
+    margin: 0.3rem;
+}

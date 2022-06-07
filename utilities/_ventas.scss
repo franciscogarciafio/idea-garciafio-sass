@@ -1,0 +1,139 @@
+
+//estilos html ventas y alquileres
+
+.contenedor_ventas{
+    display: grid;
+    grid-template-areas: "cabecera"
+                         "seccion_ventas"
+                         "pieDePaguina";
+    gap: 0.1rem;
+}
+.cabecera{
+    grid-area: cabecera;
+}
+.seccion_ventas{
+    grid-area: seccion_ventas;
+    text-align: center;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    font-size: 1rem;
+
+    .titulo_ventas{
+        @include titulosPrincipalesCel;
+    }
+    .ventas_propiedad1{
+        @include subtitulosCel
+    }
+    .ventas_propiedad2{
+        padding: 0.3rem;
+        margin: 0.3rem;
+    }
+    .ventas_propiedad3{
+        padding: 0.3rem;
+        margin: 0.3rem;
+    }
+    .ventas_descripcion{
+        padding: 0.5rem;
+        margin: 0.3rem;
+    }
+    .ventas_lista{
+        @include listaDescripcion;
+    }
+
+}
+.pieDePaguina{
+    grid-area: pieDePaguina;
+}
+//estilos html alquiler
+
+.alquileres_servicios{
+    margin: 0.1rem;
+    padding: 0.1rem;
+    font-size: 1.2rem;  
+}
+.alquileres_lista{
+    list-style-position: inside;
+    list-style-type: square;
+    font-size: 1rem;
+    margin: 0.1rem;       
+}
+
+
+//estilos para medidas en tablets sin modificaciones 
+
+// estilos para destblok
+
+
+@media screen and (min-width:1200px) {
+
+    .seccion_ventas{
+        display: grid;
+        grid-template-areas: "titulo_ventas titulo_ventas"
+                             "ventas_propiedad1 ventas_propiedad1" 
+                             "ventas_propiedad2 ventas_propiedad2"
+                             "ventas_propiedad3 ventas_propiedad3"
+                             "imagenes_ventas ventas_descripcion"
+                             "imagenes_ventas ventas_lista"
+                             ;
+            gap: 1rem;
+        }
+        .titulo_ventas{
+        grid-area: titulo_ventas;
+        
+        }
+        .ventas_propiedad1{
+        grid-area: ventas_propiedad1;
+        
+           }
+        .ventas_propiedad2{
+        grid-area: ventas_propiedad2;
+           }
+        .ventas_propiedad3{
+        grid-area: ventas_propiedad3;
+        }
+        .imagenes_ventas{
+        grid-area: imagenes_ventas;
+        }
+        .ventas_descripcion{
+        grid-area: ventas_descripcion;
+        }
+        .ventas_lista{
+        grid-area: ventas_lista;
+        }
+
+        .seccion_ventas{
+            .titulo_ventas{
+                @include titulosPrincipalesPc
+            }
+            .ventas_propiedad1{
+                @include subtitulospc
+            }
+            .ventas_propiedad2{
+                padding: 0.5rem;
+                margin: 0.5rem;
+                font-size: 1.7rem;
+            }
+            .ventas_propiedad3{
+                padding: 0.5rem;
+                margin: 0.5rem;
+                font-size: 1.8rem;
+            }
+            .ventas_descripcion{
+    
+                margin: 2rem;
+                padding: 2rem;
+                font-size: 1.8rem;
+                
+                
+            }
+            .ventas_lista{
+                font-size: 1.5rem;
+                margin: 0.3rem;
+                
+            }
+        }
+    }
+   
+   
+   
+

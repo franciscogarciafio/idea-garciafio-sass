@@ -20,7 +20,7 @@ header {
     margin-left: auto;
     padding: 0; }
   header .nav-item :hover {
-    background-color: #a46148;
+    background-color: #dacdc8;
     font-weight: bold;
     border-radius: 1rem; }
 
@@ -29,45 +29,54 @@ header {
   text-align: center;
   color: black;
   display: grid;
-  grid-template-areas: "ventas_titulo" "ventas_propiedad1" "ventas_propiedad2" "ventas_propiedad3" "ventas_video" "ventas_descripcion" "ventas_lista"; }
-  .ventas_destacadas .ventas_titulo {
-    grid-area: ventas_titulo;
-    padding: 0.5rem;
-    margin: 0.5rem;
-    font-size: 1.4rem;
-    text-transform: uppercase;
-    background-color: #f3e9dd; }
-  .ventas_destacadas .ventas_propiedad1 {
-    grid-area: ventas_propiedad1;
-    padding: 0.2rem;
-    margin: 0.2rem;
-    font-size: 1.4rem;
-    background-color: #b5a770; }
-  .ventas_destacadas .ventas_propiedad2 {
-    grid-area: ventas_propiedad2;
-    padding: 0.2rem;
-    margin: 0.2rem;
-    font-size: 1.4rem; }
-  .ventas_destacadas .ventas_propiedad3 {
-    grid-area: ventas_propiedad3;
-    padding: 0.2rem;
-    margin: 0.2rem;
-    font-size: 1.3rem; }
-  .ventas_destacadas .ventas_video {
-    grid-area: ventas_video;
-    border-radius: 2rem;
-    justify-self: center; }
-  .ventas_destacadas .ventas_descripcion {
-    grid-area: ventas_descripcion;
-    margin: 0.1rem;
-    padding: 0.1rem;
-    font-size: 1.2rem; }
-  .ventas_destacadas .ventas_lista {
-    grid-area: ventas_lista;
-    list-style-position: inside;
-    list-style-type: square;
-    font-size: 1rem;
-    margin: 0.1rem; }
+  grid-template-areas: "titulo_principal_ventas" "ventas_propiedad1" "ventas_propiedad2" "ventas_propiedad3" "ventas_video" "ventas_descripcion" "ventas_lista"; }
+
+.titulo_principal_ventas {
+  grid-area: titulo_principal_ventas;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  background-color: #f3e9dd;
+  text-align: center; }
+
+.ventas_propiedad1 {
+  grid-area: ventas_propiedad1;
+  padding: 0.2rem;
+  margin: 0.2rem;
+  font-size: 1.3rem;
+  background-color: #b5a770;
+  text-transform: uppercase; }
+
+.ventas_propiedad2 {
+  grid-area: ventas_propiedad2;
+  padding: 0.2rem;
+  margin: 0.2rem;
+  font-size: 1.4rem; }
+
+.ventas_propiedad3 {
+  grid-area: ventas_propiedad3;
+  padding: 0.2rem;
+  margin: 0.2rem;
+  font-size: 1.3rem; }
+
+.ventas_video {
+  grid-area: ventas_video;
+  border-radius: 2rem;
+  justify-self: center; }
+
+.ventas_descripcion {
+  grid-area: ventas_descripcion;
+  margin: 0.1rem;
+  padding: 0.1rem;
+  font-size: 1.2rem; }
+
+.ventas_lista {
+  grid-area: ventas_lista;
+  list-style-position: inside;
+  list-style-type: square;
+  font-size: 1rem;
+  margin: 0.1rem; }
 
 .alquileres_destacados {
   padding: 0.2rem;
@@ -78,15 +87,17 @@ header {
     grid-area: alquileres_titulo;
     padding: 0.5rem;
     margin: 0.5rem;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     text-transform: uppercase;
-    background-color: #f3e9dd; }
+    background-color: #f3e9dd;
+    text-align: center; }
   .alquileres_destacados .alquileres_propiedad1 {
     grid-area: alquileres_propiedad1;
     padding: 0.2rem;
     margin: 0.2rem;
-    font-size: 1.4rem;
-    background-color: #b5a770; }
+    font-size: 1.3rem;
+    background-color: #b5a770;
+    text-transform: uppercase; }
   .alquileres_destacados .alquileres_propiedad2 {
     grid-area: alquileres_propiedad2;
     padding: 0.2rem;
@@ -160,7 +171,7 @@ header {
 @media screen and (min-width: 768px) {
   .ventas_destacadas {
     display: grid;
-    grid-template-areas: "ventas_titulo ventas_titulo" "ventas_propiedad1 ventas_propiedad1" "ventas_propiedad2 ventas_propiedad2" "ventas_propiedad3 ventas_propiedad3" "ventas_video ventas_descripcion" "ventas_video ventas_lista"; }
+    grid-template-areas: "titulo_principal_ventas titulo_principal_ventas" "ventas_propiedad1 ventas_propiedad1" "ventas_propiedad2 ventas_propiedad2" "ventas_propiedad3 ventas_propiedad3" "ventas_video ventas_descripcion" "ventas_video ventas_lista"; }
   .ventas_video {
     height: 60vh;
     width: 80vh;
@@ -193,11 +204,11 @@ header {
 @media screen and (min-width: 1200px) {
   .navbar-nav {
     font-size: 1.5rem; }
-  .ventas_destacadas .ventas_titulo {
+  .ventas_destacadas .titulo_principal_ventas {
     padding: 0.8rem;
     margin: 0.8rem;
     font-size: 2.3rem; }
-  .ventas_destacadas .ventas_titulo:hover {
+  .ventas_destacadas .titulo_principal_ventas:hover {
     animation-iteration-count: infinite; }
   .ventas_destacadas .ventas_video {
     height: 90vh;
@@ -261,3 +272,330 @@ header {
       border-radius: 1rem; }
     .pieDePaguina .footer_inmo {
       font-size: 1rem; } }
+
+.contenedor_ventas {
+  display: grid;
+  grid-template-areas: "cabecera" "seccion_ventas" "pieDePaguina";
+  gap: 0.1rem; }
+
+.cabecera {
+  grid-area: cabecera; }
+
+.seccion_ventas {
+  grid-area: seccion_ventas;
+  text-align: center;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  font-size: 1rem; }
+  .seccion_ventas .titulo_ventas {
+    padding: 0.5rem;
+    margin: 0.5rem;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    background-color: #f3e9dd;
+    text-align: center; }
+  .seccion_ventas .ventas_propiedad1 {
+    padding: 0.2rem;
+    margin: 0.2rem;
+    font-size: 1.3rem;
+    background-color: #b5a770;
+    text-transform: uppercase; }
+  .seccion_ventas .ventas_propiedad2 {
+    padding: 0.3rem;
+    margin: 0.3rem; }
+  .seccion_ventas .ventas_propiedad3 {
+    padding: 0.3rem;
+    margin: 0.3rem; }
+  .seccion_ventas .ventas_descripcion {
+    padding: 0.5rem;
+    margin: 0.3rem; }
+  .seccion_ventas .ventas_lista {
+    margin: 0.5rem;
+    padding: 0.5rem;
+    list-style-position: inside;
+    list-style-type: square;
+    font-size: 1rem;
+    list-style-type: disc; }
+
+.pieDePaguina {
+  grid-area: pieDePaguina; }
+
+.alquileres_servicios {
+  margin: 0.1rem;
+  padding: 0.1rem;
+  font-size: 1.2rem; }
+
+.alquileres_lista {
+  list-style-position: inside;
+  list-style-type: square;
+  font-size: 1rem;
+  margin: 0.1rem; }
+
+@media screen and (min-width: 1200px) {
+  .seccion_ventas {
+    display: grid;
+    grid-template-areas: "titulo_ventas titulo_ventas" "ventas_propiedad1 ventas_propiedad1"  "ventas_propiedad2 ventas_propiedad2" "ventas_propiedad3 ventas_propiedad3" "imagenes_ventas ventas_descripcion" "imagenes_ventas ventas_lista";
+    gap: 1rem; }
+  .titulo_ventas {
+    grid-area: titulo_ventas; }
+  .ventas_propiedad1 {
+    grid-area: ventas_propiedad1; }
+  .ventas_propiedad2 {
+    grid-area: ventas_propiedad2; }
+  .ventas_propiedad3 {
+    grid-area: ventas_propiedad3; }
+  .imagenes_ventas {
+    grid-area: imagenes_ventas; }
+  .ventas_descripcion {
+    grid-area: ventas_descripcion; }
+  .ventas_lista {
+    grid-area: ventas_lista; }
+  .seccion_ventas .titulo_ventas {
+    padding: 0.8rem;
+    margin: 0.8rem;
+    font-size: 2.3rem; }
+  .seccion_ventas .ventas_propiedad1 {
+    padding: 0.5rem;
+    margin: 0.5rem;
+    font-size: 2rem; }
+  .seccion_ventas .ventas_propiedad2 {
+    padding: 0.5rem;
+    margin: 0.5rem;
+    font-size: 1.7rem; }
+  .seccion_ventas .ventas_propiedad3 {
+    padding: 0.5rem;
+    margin: 0.5rem;
+    font-size: 1.8rem; }
+  .seccion_ventas .ventas_descripcion {
+    margin: 2rem;
+    padding: 2rem;
+    font-size: 1.8rem; }
+  .seccion_ventas .ventas_lista {
+    font-size: 1.5rem;
+    margin: 0.3rem; } }
+
+.contenedor_nosotros {
+  display: grid;
+  grid-template-areas: "navbar" "nosotros_empresa" "nosotros_staff" "pieDePaguina";
+  gap: 1rem; }
+
+.navbar {
+  grid-area: navbar; }
+
+.nosotros_empresa {
+  grid-area: nosotros_empresa; }
+  .nosotros_empresa .titulo_nosotros {
+    padding: 0.5rem;
+    margin: 0.5rem;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    background-color: #f3e9dd;
+    text-align: center; }
+  .nosotros_empresa .imagen_nosotros {
+    width: 100%;
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 2rem; }
+  .nosotros_empresa .parrafo_nosotros {
+    font-size: 1rem;
+    margin: 0.5rem;
+    padding: 0.5rem; }
+
+.nosotros_staff {
+  grid-area: nosotros_staff; }
+  .nosotros_staff .equipo {
+    padding: 0.5rem;
+    margin: 0.5rem;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    background-color: #f3e9dd;
+    text-align: center; }
+  .nosotros_staff .imagen_staff {
+    width: 100%;
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 2rem; }
+  .nosotros_staff .parrafo_staff {
+    font-size: 1rem;
+    margin: 0.5rem;
+    padding: 0.5rem; }
+
+.pieDePaguina {
+  grid-area: pieDePaguina; }
+
+@media screen and (min-width: 1200px) {
+  .nosotros_empresa {
+    display: grid;
+    grid-template-areas: "titulo_nosotros titulo_nosotros" "imagen_nosotros parrafo_nosotros";
+    gap: 1rem; }
+  .titulo_nosotros {
+    grid-area: titulo_nosotros; }
+  .nosotros_empresa .titulo_nosotros {
+    padding: 0.8rem;
+    margin: 0.8rem;
+    font-size: 2.3rem; }
+  .nosotros_empresa .imagen_nosotros {
+    width: 100vh; }
+  .nosotros_empresa .parrafo_nosotros {
+    font-size: 1.2rem; }
+  .imagen_nosotros {
+    grid-area: imagen_nosotros; }
+  .parrafo_nosotros {
+    grid-area: parrafo_nosotros; }
+  .nosotros_staff {
+    display: grid;
+    grid-template-areas: "equipo equipo" "imagen_staff parrafo_staff";
+    gap: 1rem; }
+  .nosotros_staff .equipo {
+    padding: 0.8rem;
+    margin: 0.8rem;
+    font-size: 2.3rem; }
+  .nosotros_staff .imagen_staff {
+    width: 100vh; }
+  .nosotros_staff .parrafo_staff {
+    font-size: 1.2rem; }
+  .equipo {
+    grid-area: equipo; }
+  .imagen_staff {
+    grid-area: imagen_staff; }
+  .parrafo_staff {
+    grid-area: parrafo_staff; } }
+
+.titulo_tasacion {
+  padding: 0.5rem;
+  margin: 0.5rem;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  background-color: #f3e9dd;
+  text-align: center; }
+
+.parrafo_tasacion {
+  font-size: 1rem;
+  margin: 0.5rem;
+  padding: 0.5rem; }
+
+.contenedor_formulario {
+  display: flex;
+  justify-content: center; }
+
+.formulario {
+  margin: 0.5rem;
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  background-color: #b5a770;
+  border-radius: 1rem;
+  text-align: center;
+  display: inline-block;
+  justify-content: center; }
+
+.datos {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem; }
+
+.cuadro_info {
+  background-color: #deded5;
+  width: 80%;
+  height: 2rem;
+  margin: 0.5rem;
+  padding: 0.2rem;
+  border-radius: 0.6rem;
+  font-size: 1.2rem; }
+
+.cuadro_info2 {
+  background-color: #deded5;
+  width: 80%;
+  height: 10rem;
+  margin: 0.5rem;
+  padding: 0.2rem;
+  border-radius: 0.6rem;
+  font-size: 1.2rem; }
+
+@media screen and (min-width: 1200px) {
+  .titulo_tasacion {
+    padding: 0.8rem;
+    margin: 0.8rem;
+    font-size: 2.3rem; }
+  .parrafo_tasacion {
+    font-size: 1.2rem;
+    margin: 1rem;
+    padding: 1rem; }
+  .formulario {
+    width: 170vh;
+    font-size: 2.2rem; }
+  .datos {
+    font-size: 2.5rem; }
+  .cuadro_info {
+    margin: 0.5rem;
+    padding: 0.2rem;
+    border-radius: 1.5rem;
+    font-size: 1.8rem; }
+  .cuadro_info2 {
+    height: 25vh;
+    margin: 0.5rem;
+    padding: 0.2rem;
+    border-radius: 0.6rem;
+    font-size: 1.8rem; } }
+
+.seccion_contactos {
+  display: grid;
+  gap: 1rem;
+  grid-template-areas: "titulo_contactanos" "contacto_oficina" "contacto_ubicacion" "consulta" "formulario"; }
+
+.titulo_contactanos {
+  grid-area: titulo_contactanos; }
+
+.seccion_contactos .titulo_contactanos {
+  padding: 0.5rem;
+  margin: 0.5rem;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  background-color: #f3e9dd;
+  text-align: center; }
+
+.contacto_oficina {
+  grid-area: contacto_oficina;
+  background-image: url(imagencontacto.jpg);
+  background-size: cover;
+  text-align: center;
+  margin-bottom: 0%;
+  width: 90%;
+  height: 35vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  font-size: 1.4rem;
+  margin: 0 auto;
+  padding: 0.1rem; }
+
+.numero_tel {
+  color: #e8f79e; }
+
+.contacto_ubicacion {
+  grid-area: contacto_ubicacion;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center; }
+
+.mapa_contacto {
+  width: 90%; }
+
+.consulta {
+  grid-area: consulta;
+  margin: 1rem;
+  padding: 0.5rem; }
+
+.formulario {
+  grid-area: formulario; }
+
+@media screen and (min-width: 1200px) {
+  .seccion_contactos .titulo_contactanos {
+    padding: 0.8rem;
+    margin: 0.8rem;
+    font-size: 2.3rem; }
+  .seccion_contactos .contacto_oficina {
+    font-size: 2rem; }
+  .mapa_contacto {
+    height: 100vh; }
+  .consulta {
+    font-size: 1.5rem; } }

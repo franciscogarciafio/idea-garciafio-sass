@@ -1,0 +1,113 @@
+//estilos para html nosotros
+
+.contenedor_nosotros{
+    display: grid;
+    grid-template-areas: "navbar"
+                         "nosotros_empresa"
+                         "nosotros_staff"
+                         "pieDePaguina";
+    gap: 1rem;
+}
+.navbar{
+    grid-area: navbar;
+}
+.nosotros_empresa{
+    grid-area: nosotros_empresa;
+    .titulo_nosotros{
+        @include titulosPrincipalesCel
+    }
+    .imagen_nosotros{
+        width: 100%;
+        margin-top: 0.5rem;
+        padding: 0.5rem;
+        border-radius: 2rem;
+    }
+    .parrafo_nosotros{
+        font-size: 1rem;
+        margin: 0.5rem;
+        padding: 0.5rem;
+    }
+}
+.nosotros_staff{
+    grid-area: nosotros_staff;
+    .equipo{
+        @include titulosPrincipalesCel
+    }
+    .imagen_staff{
+        width: 100%;
+        margin-top: 0.5rem;
+        padding: 0.5rem;
+        border-radius: 2rem;
+    }
+    .parrafo_staff{
+        font-size: 1rem;
+        margin: 0.5rem;
+        padding: 0.5rem;
+    }
+}
+.pieDePaguina{
+    grid-area: pieDePaguina;
+}
+
+  // estilos para destblok
+
+  @media screen and (min-width:1200px) {
+    .nosotros_empresa{
+        display: grid;
+        grid-template-areas: "titulo_nosotros titulo_nosotros"
+                             "imagen_nosotros parrafo_nosotros";
+       gap:1rem;
+        
+                     
+    }
+    .titulo_nosotros{
+        grid-area: titulo_nosotros;
+    }
+    .nosotros_empresa{
+        .titulo_nosotros{
+            @include titulosPrincipalesPc
+        }
+        .imagen_nosotros{
+            width: 100vh;
+        }
+        .parrafo_nosotros{
+            font-size: 1.2rem;
+        }
+    }
+    .imagen_nosotros{
+        grid-area: imagen_nosotros;
+        
+    }
+    .parrafo_nosotros{
+        grid-area: parrafo_nosotros;
+    
+    }
+
+    .nosotros_staff{
+        display: grid;
+        grid-template-areas: "equipo equipo"
+                             "imagen_staff parrafo_staff";
+        gap:1rem
+    }
+    .nosotros_staff{
+        .equipo{
+            @include titulosPrincipalesPc
+        }
+        .imagen_staff{
+            width: 100vh;
+        }
+        .parrafo_staff{
+            font-size: 1.2rem;
+        }
+    }
+    .equipo{
+        grid-area: equipo;
+    }
+    .imagen_staff{
+        grid-area: imagen_staff;
+    }
+    .parrafo_staff{
+        grid-area: parrafo_staff;
+    }
+
+  }
