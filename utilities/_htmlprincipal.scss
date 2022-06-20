@@ -18,7 +18,7 @@ header{
     z-index: 1; 
 
     .logo{
-        margin: 1rem;
+        margin: 0.2rem;
         border-radius: 1rem;
      }
     .navbar-toggler{
@@ -286,7 +286,7 @@ header{
 @media screen and (min-width:1200px)  {
 
     .navbar-nav{
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
 
     .ventas_destacadas{
@@ -383,16 +383,16 @@ header{
     }
 
     .pieDePaguina{
-        height: 25vh;
+        height: 20vh;
     
              .logo_fin1{
-             height: 20vh;
+             height: 16vh;
              margin: 0.1rem;
              padding: 0.3rem;
              border-radius: 1rem;
              }
              .footer_inmo{
-                 font-size: 1rem;
+                 font-size: 0.8rem;
              }
         
     }

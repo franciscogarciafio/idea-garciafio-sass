@@ -12,7 +12,7 @@ header {
   top: 0;
   z-index: 1; }
   header .logo {
-    margin: 1rem;
+    margin: 0.2rem;
     border-radius: 1rem; }
   header .navbar-toggler {
     background-color: #ded3c2; }
@@ -203,7 +203,7 @@ header {
 
 @media screen and (min-width: 1200px) {
   .navbar-nav {
-    font-size: 1.5rem; }
+    font-size: 1.3rem; }
   .ventas_destacadas .titulo_principal_ventas {
     padding: 0.8rem;
     margin: 0.8rem;
@@ -264,14 +264,14 @@ header {
     font-size: 1.5rem;
     margin: 0.3rem; }
   .pieDePaguina {
-    height: 25vh; }
+    height: 20vh; }
     .pieDePaguina .logo_fin1 {
-      height: 20vh;
+      height: 16vh;
       margin: 0.1rem;
       padding: 0.3rem;
       border-radius: 1rem; }
     .pieDePaguina .footer_inmo {
-      font-size: 1rem; } }
+      font-size: 0.8rem; } }
 
 .contenedor_ventas {
   display: grid;
