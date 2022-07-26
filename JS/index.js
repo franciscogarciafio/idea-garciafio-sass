@@ -86,6 +86,8 @@ for(let i=0; i < inmueble.length; i++){
     }
 }
 
-console.log(inmueble);
+console.log(inmuebles)
 
-
+for(inmueble of inmuebles){
+    console.log(`quiero ${inmueble.nombre} y su precio es ${inmueble.precio}`)
+}
