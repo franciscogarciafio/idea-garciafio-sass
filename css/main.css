@@ -29,7 +29,13 @@ header {
   text-align: center;
   color: black;
   display: grid;
-  grid-template-areas: "titulo_principal_ventas" "ventas_propiedad1" "ventas_propiedad2" "ventas_propiedad3" "ventas_video" "ventas_descripcion" "ventas_lista"; }
+  grid-template-areas: "titulo_principal_ventas"
+ "ventas_propiedad1"
+ "ventas_propiedad2"
+ "ventas_propiedad3"
+ "ventas_video"
+ "ventas_descripcion"
+ "ventas_lista"; }
 
 .titulo_principal_ventas {
   grid-area: titulo_principal_ventas;
@@ -81,7 +87,14 @@ header {
 .alquileres_destacados {
   padding: 0.2rem;
   display: grid;
-  grid-template-areas: "alquileres_titulo" "alquileres_propiedad1" "alquileres_propiedad2" "alquileres_propiedad3" "carouselExampleControls" "alquileres_descripcion" "alquileres_servicios" "alquileres_lista";
+  grid-template-areas: "alquileres_titulo"
+ "alquileres_propiedad1"
+ "alquileres_propiedad2"
+ "alquileres_propiedad3"
+ "carouselExampleControls"
+ "alquileres_descripcion"
+ "alquileres_servicios"
+ "alquileres_lista";
   text-align: center; }
   .alquileres_destacados .alquileres_titulo {
     grid-area: alquileres_titulo;
@@ -134,7 +147,8 @@ header {
   grid-area: pieDePaguina;
   background-color: #b7cadb;
   display: grid;
-  grid-template-areas: "logo_fin" "footer_inmo";
+  grid-template-areas: "logo_fin"
+ "footer_inmo";
   font-size: 0.6rem;
   gap: 0.5rem; }
 
@@ -171,7 +185,12 @@ header {
 @media screen and (min-width: 768px) {
   .ventas_destacadas {
     display: grid;
-    grid-template-areas: "titulo_principal_ventas titulo_principal_ventas" "ventas_propiedad1 ventas_propiedad1" "ventas_propiedad2 ventas_propiedad2" "ventas_propiedad3 ventas_propiedad3" "ventas_video ventas_descripcion" "ventas_video ventas_lista"; }
+    grid-template-areas: "titulo_principal_ventas titulo_principal_ventas"
+ "ventas_propiedad1 ventas_propiedad1"
+ "ventas_propiedad2 ventas_propiedad2"
+ "ventas_propiedad3 ventas_propiedad3"
+ "ventas_video ventas_descripcion"
+ "ventas_video ventas_lista"; }
   .ventas_video {
     height: 60vh;
     width: 80vh;
@@ -180,7 +199,13 @@ header {
     margin: 2rem; }
   .alquileres_destacados {
     display: grid;
-    grid-template-areas: "alquileres_titulo alquileres_titulo" "alquileres_propiedad1 alquileres_propiedad1" "alquileres_propiedad2 alquileres_propiedad2" "alquileres_propiedad3 alquileres_propiedad3" "carouselExampleControls alquileres_descripcion" "carouselExampleControls alquileres_servicios" "carouselExampleControls alquileres_lista"; }
+    grid-template-areas: "alquileres_titulo alquileres_titulo"
+ "alquileres_propiedad1 alquileres_propiedad1"
+ "alquileres_propiedad2 alquileres_propiedad2"
+ "alquileres_propiedad3 alquileres_propiedad3"
+ "carouselExampleControls alquileres_descripcion"
+ "carouselExampleControls alquileres_servicios"
+ "carouselExampleControls alquileres_lista"; }
   #carouselExampleControls {
     height: 60vh;
     width: 80vh;
@@ -275,7 +300,9 @@ header {
 
 .contenedor_ventas {
   display: grid;
-  grid-template-areas: "cabecera" "seccion_ventas" "pieDePaguina";
+  grid-template-areas: "cabecera"
+ "seccion_ventas"
+ "pieDePaguina";
   gap: 0.1rem; }
 
 .cabecera {
@@ -334,7 +361,12 @@ header {
 @media screen and (min-width: 1200px) {
   .seccion_ventas {
     display: grid;
-    grid-template-areas: "titulo_ventas titulo_ventas" "ventas_propiedad1 ventas_propiedad1"  "ventas_propiedad2 ventas_propiedad2" "ventas_propiedad3 ventas_propiedad3" "imagenes_ventas ventas_descripcion" "imagenes_ventas ventas_lista";
+    grid-template-areas: "titulo_ventas titulo_ventas"
+ "ventas_propiedad1 ventas_propiedad1" 
+ "ventas_propiedad2 ventas_propiedad2"
+ "ventas_propiedad3 ventas_propiedad3"
+ "imagenes_ventas ventas_descripcion"
+ "imagenes_ventas ventas_lista";
     gap: 1rem; }
   .titulo_ventas {
     grid-area: titulo_ventas; }
@@ -376,7 +408,10 @@ header {
 
 .contenedor_nosotros {
   display: grid;
-  grid-template-areas: "navbar" "nosotros_empresa" "nosotros_staff" "pieDePaguina";
+  grid-template-areas: "navbar"
+ "nosotros_empresa"
+ "nosotros_staff"
+ "pieDePaguina";
   gap: 1rem; }
 
 .navbar {
@@ -426,7 +461,8 @@ header {
 @media screen and (min-width: 1200px) {
   .nosotros_empresa {
     display: grid;
-    grid-template-areas: "titulo_nosotros titulo_nosotros" "imagen_nosotros parrafo_nosotros";
+    grid-template-areas: "titulo_nosotros titulo_nosotros"
+ "imagen_nosotros parrafo_nosotros";
     gap: 1rem; }
   .titulo_nosotros {
     grid-area: titulo_nosotros; }
@@ -444,7 +480,8 @@ header {
     grid-area: parrafo_nosotros; }
   .nosotros_staff {
     display: grid;
-    grid-template-areas: "equipo equipo" "imagen_staff parrafo_staff";
+    grid-template-areas: "equipo equipo"
+ "imagen_staff parrafo_staff";
     gap: 1rem; }
   .nosotros_staff .equipo {
     padding: 0.8rem;
@@ -539,7 +576,11 @@ header {
 .seccion_contactos {
   display: grid;
   gap: 1rem;
-  grid-template-areas: "titulo_contactanos" "contacto_oficina" "contacto_ubicacion" "consulta" "formulario"; }
+  grid-template-areas: "titulo_contactanos"
+ "contacto_oficina"
+ "contacto_ubicacion"
+ "consulta"
+ "formulario"; }
 
 .titulo_contactanos {
   grid-area: titulo_contactanos; }
@@ -599,3 +640,72 @@ header {
     height: 100vh; }
   .consulta {
     font-size: 1.2rem; } }
+
+  .boton{
+      border: 1px solid rgba(56, 30, 4, 0.5);
+      border-radius: 10px;
+      padding: 10px;
+      margin: 10px;
+      font-size: 1.5rem;
+      background-color: #c9c4ad;
+  }
+  .boton:hover{
+      background-color: rgba(119, 84, 38, 0.5);
+  }
+  .img-js{
+    height: 70%;
+    width: 70%;
+  }
+
+  /* POPUP */
+.popupDetalle{
+  position: fixed;
+  z-index: 1;
+  background-color: rgba(128, 128, 128, 0.4);
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.popupDetalle>div{
+  background-color: #e2d0af;
+  width: 60%;
+  padding: 20px;
+  border-radius: 10px;
+}
+.product-detail .imagen{
+  width: 50%;
+  display: flex;
+  align-items: center;
+  border: 3px solid black;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.closePopup{
+  text-align: end;
+  width: 100%;
+}
+.product-detail{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.descripcion-detail .click{
+  margin: 10px 0
+}
+.descripcion-detail .click .resultado{
+  margin: 0 10px
+}
+.descripcion-detail .click .less, .descripcion-detail .click .more{
+  border: 2px solid rgb(122, 152, 162);
+  background-color: lightblue;
+  border-radius: 50%;
+  padding: 3px 7px;
+}
+.d-none{
+  display: none;
+}
