@@ -1,76 +1,107 @@
-const productos = [
-    {
-    id: 1,
-    nombre: "casa en alquiler",
-    precio: " $35.000",
-    ubicacion: "Jesus Maria",
-    stock: 1,
-    img:'https://i.ibb.co/xDKrXct/camp2.png'
-    },
-    {
-    id: 2,
-    nombre: "campo en alquiler",
-    precio: "$120.000",
-    ubicacion: "Villa del Totoral",
-    stock: 1,
-    img: 'https://i.ibb.co/DRjdCqJ/camp3.png'
-    },
-    {
-    id: 3,
-    nombre: "Departamento en alquiler",
-    precio: "55.000",
-    ubicacion: "Colonia caroya",
-    stock: 1,
-    img: 'https://i.ibb.co/5FY1hdR/ext3.png'
-    },
-    {
-    id: 4,
-    nombre: "casa en alquiler",
-    ubicacion: "Villa del totoral",
-    precio: "$40.000",
-    stock: 1,
-    img: 'https://i.ibb.co/QbFC6rZ/exterior1.png'
-    },
-    {
-    id: 5,
-    nombre: "chalet en elaquiler",
-    precio: "$150.000",
-    ubicacion: "Villa del totoral",
-    stock: 1,
-    img: 'https://i.ibb.co/z7vxnTB/ext2.png'
-    },
-    {
-    id: 6,
-    nombre: "terreno en alquiler",
-    precio: "$10.000",
-    ubicacion: "Villa del totoral",
-    stock: 1,
-    img: 'https://i.ibb.co/RyWL5NX/ext4.png'
-    }
-]
+//const productos = [
+//    {
+//    id: 1,
+//    nombre: "casa en alquiler",
+//    precio: " $35.000",
+//    ubicacion: "Jesus Maria",
+//    stock: 1,
+//    img:'https://i.ibb.co/xDKrXct/camp2.png'
+//    },
+//    {
+//    id: 2,
+//    nombre: "campo en alquiler",
+//    precio: "$120.000",
+//    ubicacion: "Villa del Totoral",
+//    stock: 1,
+//    img: 'https://i.ibb.co/DRjdCqJ/camp3.png'
+//    },
+//    {
+//    id: 3,
+//    nombre: "Departamento en alquiler",
+//    precio: "55.000",
+//    ubicacion: "Colonia caroya",
+//    stock: 1,
+//    img: 'https://i.ibb.co/5FY1hdR/ext3.png'
+//    },
+//    {
+//    id: 4,
+//    nombre: "casa en alquiler",
+//    ubicacion: "Villa del totoral",
+//    precio: "$40.000",
+//    stock: 1,
+//    img: 'https://i.ibb.co/QbFC6rZ/exterior1.png'
+//    },
+//    {
+//    id: 5,
+//    nombre: "chalet en elaquiler",
+//    precio: "$150.000",
+//    ubicacion: "Villa del totoral",
+//    stock: 1,
+//    img: 'https://i.ibb.co/z7vxnTB/ext2.png'
+//    },
+//    {
+//    id: 6,
+//    nombre: "terreno en alquiler",
+//    precio: "$10.000",
+//    ubicacion: "Villa del totoral",
+//    stock: 1,
+//    img: 'https://i.ibb.co/RyWL5NX/ext4.png'
+//    }
+//]
 
 const mainAlquiler = document.querySelector('.main')
+let url = 'http://hp-api.herokuapp.com/api/characters/id' 
+//url es el ENDPOINT ! 
+
+fetch(url)
+    .then((response) => {
+        //console.log(response.json()) // esto es una promesa por eso necesito OTRO .then para obtener la informacion que estoy buscando
+        return response.json()
+    })
+    .then((json) => {
+        console.log(json)
+        //let personajes = json.results
+        let personajes = json
+
+        personajes.forEach(personaje => {
+            const {name, image, house} = personaje
+            mainAlquiler.innerHTML +=  `<article class="seccion_ventas">
+            <div class="descripcion">
+                <h3 class="ventas_propiedad1">${nombre}</h3>
+                <h4 class="ventas_propiedad3">${ubicacion}</h4>
+                <h4 class="ventas_propiedad2">${precio}</h4>
+                <div class="imagen">
+                <img class="img-js" src="${img}" alt="${nombre}">
+                 </div>
+                <div class="boton">Reservar la Propiedad</div>
+                <input type='hidden' class='info-id' value="${id}"/>
+            </div>
+        </article>`
+
+        let botonProd = document.querySelector(`.boton-${id}`)
+})
+})
 //For para insertar productos al main segun mi array de objetos
 
-for(producto of productos){
-    //Uso desestructuracion para no repetir producto.propiedad
-    const {id, nombre, precio, ubicacion, stock, img} = producto
-
-    mainAlquiler.innerHTML +=  `<article class="seccion_ventas">
-                                <div class="descripcion">
-                                    <h3 class="ventas_propiedad1">${nombre}</h3>
-                                    <h4 class="ventas_propiedad3">${ubicacion}</h4>
-                                    <h4 class="ventas_propiedad2">${precio}</h4>
-                                    <div class="imagen">
-                                    <img class="img-js" src="${img}" alt="${nombre}">
-                                     </div>
-                                    <div class="boton">Reservar la Propiedad</div>
-                                    <input type='hidden' class='info-id' value="${id}"/>
-                                </div>
-                            </article>`
-
-    let botonProd = document.querySelector(`.boton-${id}`)
-}
+//for(producto of productos){
+//    //Uso desestructuracion para no repetir producto.propiedad
+//    const {id, nombre, precio, ubicacion, stock, img} = producto
+//
+//    mainAlquiler.innerHTML +=  `<article class="seccion_ventas">
+//                                <div class="descripcion">
+//                                    <h3 class="ventas_propiedad1">${nombre}</h3>
+//                                    <h4 class="ventas_propiedad3">${ubicacion}</h4>
+//                                    <h4 class="ventas_propiedad2">${precio}</h4>
+//                                    <div class="imagen">
+//                                    <img class="img-js" src="${img}" alt="${nombre}">
+//                                     </div>
+//                                    <div class="boton">Reservar la Propiedad</div>
+//                                    <input type='hidden' class='info-id' value="${id}"/>
+//                                </div>
+//                            </article>`
+//
+//    let botonProd = document.querySelector(`.boton-${id}`)
+//}
 
 const botonesVerDetalle = document.querySelectorAll('.boton')
 const popup = document.querySelector('.popupDetalle')
@@ -159,3 +190,5 @@ function imprimirDetalle(id, insertBox){
         }
     }
 }
+
+
