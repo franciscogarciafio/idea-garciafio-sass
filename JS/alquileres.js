@@ -50,21 +50,21 @@
 //]
 
 const mainAlquiler = document.querySelector('.main')
-let url = 'http://hp-api.herokuapp.com/api/characters/id' 
+let url = "https://github.com/franciscogarciafio/idea-garciafio-sass/blob/[main|master]/db.json" 
 //url es el ENDPOINT ! 
 
 fetch(url)
     .then((response) => {
-        //console.log(response.json()) // esto es una promesa por eso necesito OTRO .then para obtener la informacion que estoy buscando
+        console.log(response.json()) // esto es una promesa por eso necesito OTRO .then para obtener la informacion que estoy buscando
         return response.json()
     })
-    .then((json) => {
-        console.log(json)
+    .then((productos) => {
+        console.log(productos)
         //let personajes = json.results
-        let personajes = json
+        let propiedades = productos.productos
 
-        personajes.forEach(personaje => {
-            const {name, image, house} = personaje
+        propiedades.forEach(propiedad => {
+            const {id, nombre, precio, ubicacion, stock, img} = propiedad
             mainAlquiler.innerHTML +=  `<article class="seccion_ventas">
             <div class="descripcion">
                 <h3 class="ventas_propiedad1">${nombre}</h3>
