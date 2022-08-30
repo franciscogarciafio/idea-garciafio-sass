@@ -51,18 +51,17 @@
 
 const mainAlquiler = document.querySelector('.main')
 
-let url = 'https://github.com/franciscogarciafio/idea-garciafio-sass/db.json' 
-//url es el ENDPOINT ! 
-console.log(url);
+let url = '../db.json' 
+ 
+//console.log(url);
 fetch(url)
     .then((response) => {
-        console.log(response.json()) // esto es una promesa por eso necesito OTRO .then para obtener la informacion que estoy buscando
+        //console.log(response.json()) // esto es una promesa por eso necesito OTRO .then para obtener la informacion que estoy buscando
         return response.json()
     })
-    .then((productos) => {
-        console.log(productos)
-        //let personajes = json.results
-        let propiedades = productos.productos
+    .then((json) => {
+        console.log(json)
+        let propiedades = json.productos
 
         propiedades.forEach(propiedad => {
             const {id, nombre, precio, ubicacion, stock, img} = propiedad
@@ -79,9 +78,11 @@ fetch(url)
             </div>
         </article>`
 
-        let botonProd = document.querySelector(`.boton-${id}`)
+        let botonProd = document.querySelector(`.boton${id}`) 
 })
 })
+
+
 //For para insertar productos al main segun mi array de objetos
 
 //for(producto of productos){
