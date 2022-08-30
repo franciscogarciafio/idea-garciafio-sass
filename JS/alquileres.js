@@ -65,6 +65,7 @@ fetch(url)
 
         propiedades.forEach(propiedad => {
             const {id, nombre, precio, ubicacion, stock, img} = propiedad
+
             mainAlquiler.innerHTML +=  `<article class="seccion_ventas">
             <div class="descripcion">
                 <h3 class="ventas_propiedad1">${nombre}</h3>
@@ -112,14 +113,14 @@ const popup = document.querySelector('.popupDetalle')
 
 //Como tengo un array donde todos los btoones tienen la misma clase, uso el querySelectorAll y recorro ese array dandoles un evento de onclick
 for(verDetalle of botonesVerDetalle){
-    verDetalle.onclick = (e) => {
+    verDetalle.onclick = (json) => {
+        
         popup.classList.remove('d-none')
         let id = e.target.nextElementSibling.value
         imprimirDetalle(id, popup)
     }
 
 }
-
 let storage = []
 
 function imprimirDetalle(id, insertBox){
