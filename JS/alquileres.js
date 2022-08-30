@@ -50,9 +50,10 @@
 //]
 
 const mainAlquiler = document.querySelector('.main')
-let url = "https://github.com/franciscogarciafio/idea-garciafio-sass/blob/[main|master]/db.json" 
-//url es el ENDPOINT ! 
 
+let url = 'https://github.com/franciscogarciafio/idea-garciafio-sass/db.json' 
+//url es el ENDPOINT ! 
+console.log(url);
 fetch(url)
     .then((response) => {
         console.log(response.json()) // esto es una promesa por eso necesito OTRO .then para obtener la informacion que estoy buscando
@@ -105,6 +106,7 @@ fetch(url)
 
 const botonesVerDetalle = document.querySelectorAll('.boton')
 const popup = document.querySelector('.popupDetalle')
+
 
 
 //Como tengo un array donde todos los btoones tienen la misma clase, uso el querySelectorAll y recorro ese array dandoles un evento de onclick
