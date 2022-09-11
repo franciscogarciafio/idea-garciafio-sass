@@ -20,9 +20,13 @@ function validar(e){
         mensajeError.style.display = 'block'
         mensajeError.innerText = '* Error! El nombre debe tener mas de 5 caracteres!!'
         mensajeError.style.color = 'red'
-    }else{
-        mensajeError.style.display = 'none'
     }
+    else{
+        swal({
+            title: 'Enviaste tu consulta!',
+            icon: 'success',
+            confirmButtonText: 'Cool'
+        })
      
     if(!email.value){
         mensajeError.style.display = 'block'
@@ -39,5 +43,6 @@ function validar(e){
         mensajeError.innerText = '* Error! Por favor complete su mensaje'
         mensajeError.style.color = 'red'
     }
-      
+        mensajeError.style.display = 'none'
+    }
 }

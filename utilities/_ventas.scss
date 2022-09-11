@@ -68,12 +68,12 @@
 
     .seccion_ventas{
         display: grid;
-        grid-template-areas: "titulo_ventas titulo_ventas"
-                             "ventas_propiedad1 ventas_propiedad1" 
-                             "ventas_propiedad2 ventas_propiedad2"
-                             "ventas_propiedad3 ventas_propiedad3"
-                             "imagenes_ventas ventas_descripcion"
-                             "imagenes_ventas ventas_lista"
+        grid-template-areas: "titulo_ventas"
+                             "ventas_propiedad1" 
+                             "ventas_propiedad2"
+                             "ventas_propiedad3"
+                             "imagenes_ventas"
+                             
                              ;
             gap: 1rem;
         }
@@ -93,6 +93,7 @@
         }
         .imagenes_ventas{
         grid-area: imagenes_ventas;
+        width: 80px;
         }
         .ventas_descripcion{
         grid-area: ventas_descripcion;

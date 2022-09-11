@@ -54,182 +54,78 @@
                              <li class="nav-item">
                                  <a class="nav-link active" aria-current="page" href="../pages/contacto.html">Contacto</a>
                             </li> 
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="../pages/carrito.html">Carrito</a>
-                              </li> 
+                            <li class="nav-item ">
+                                <button class="nav-link text-body carrito" id="open" href="#"><img src="../img/carrito.png" alt="botonCarrito"> <span id="contador-carrito">0</span> </a>
+                            </li>
+                             
                         </ul>
+                        <div class="usuario">
+                            <div id="nombreUsuario">
+                            </div> 
+                            <button id="cerrarSesion" title="Cerrar sesión"><img src="../img/logout.svg"alt="logout">
+                            </button>
+                        </div>
                     </div>
                 </div>
           </nav>
         </header>
-    
-
-         <section class="seccion_ventas">
-
-                 <h1 class="titulo_ventas">Propiedades en alquiler</h1>
-                
-
-             <div>
-             <article class="listaAlquiler">
-                <p class="ventas_propiedad1">
-                Casa en alquiler
-                </p>
-                <p class="ventas_propiedad2">
-                $30.000
-                 </p>
-                <p class="ventas_propiedad3">
-                Ubicado sobre calle san martin
-                 </p>
-            
-                <img src="../img/exterior1.png" class="img-fluid" alt="imagen de casa">
-             </article>
-
-                <p class="alquileres_servicios">
-                Composición:
-                </p> 
-                <ul class="alquileres_lista">
-                    <li>Cocina-comedor</li>
-                    <li>Living</li>
-                    <li>Baño</li>
-                    <li>Tres dormitorios</li>
-                    <li>Depósito</li>
-                    <li>Cochera</li>
-                    <li>Pileta</li>
-                    
-                </ul>
-                 <p class="alquileres_servicios">
-                Servicios
-                </p>
-                 <ul class="alquileres_lista">
-                    <li>Agua corriente</li>
-                    <li>Electricidad</li>
-                    <li>Gas natural</li>
-                    <li>Asfalto</li>
-                 </ul>  
+        <main>
+            <div id="productoContenedor"></div>
+            <div class="modal-container" id="modal_container">
+                <div class="modal-carrito">
+                    <button class="btn-close" id="cerrar"></button>
+                    <h3>CARRITO DE COMPRAS</h3>
+                    <div id="carrito-contenedor"></div>
+                    <div id="vaciarCarrito"><button class="vaciarCarrito btn btn">Vaciar carrito</button></div> 
+                    <div>
+                        <div id="sumaTotal"></div>
+                        <button class="btn btn" id="btnFinalizarCompra">Comprar</button>
+                        <div id="errorCompra"></div>
+                    </div>
+                </div>
             </div>
-
-            <div>
-            <p class="ventas_propiedad1">
-                Casa quina en alquiler
-            </p>
-            <p class="ventas_propiedad2">
-                $30.000
-            </p>
-            <p class="ventas_propiedad3">
-                Ubicado sobre calle san martin
-            </p>
-                 <img src="../img/ext2.png" class="img-fluid" alt="imagen de casa">
-
-            <p class="alquileres_servicios">
-                Composición:
-            </p> 
-                <ul class="alquileres_lista">
-                    <li>Cocina-comedor</li>
-                    <li>Living</li>
-                    <li>Baño</li>
-                    <li>Tres dormitorios</li>
-                    <li>Depósito</li>
-                    <li>Cochera</li>
-                    <li>Pileta</li>
-                    
-                </ul>
-            <p class="alquileres_servicios">
-                Servicios
-            </p>
-                <ul class="alquileres_lista">
-                    <li>Agua corriente</li>
-                    <li>Electricidad</li>
-                    <li>Gas natural</li>
-                    <li>Asfalto</li>
-                </ul>
-            </p>   
+            <div class="containerForm container-fluid">
+                <div class="containerFormDiv">
+                    <button class="btn-close" id="btnCerrarForm"></button>
+                    <h2>FINALIZÁ TU COMPRA</h2>
+                    <div class="containerFormCompra">
+                        <form id="formFinalizarCompra" class="datosPersonales">
+                            <h3>Datos personales</h3>
+                            <fieldset class="container-fluid">
+                                <div class="column">
+                                    <div class="mb-3 col-lg-3 col-md-6 labelForm">
+                                        <label for="exampleFormControlTextarea1" class="form-label">Nombre</label>
+                                        <input type="text" class="form-control" placeholder="Ingrese su nombre"
+                                            aria-label="First name">
+                                    </div>
+                                    <div class="mb-3 col-lg-3 col-md-6 labelForm">
+                                        <label for="exampleFormControlTextarea1" class="form-label">Apellido</label>
+                                        <input type="text" class="form-control" placeholder="Ingrese su apellido" aria-label="Last name">
+                                    </div>
+                                </div>
+                                <div class="mb-3 col-lg-3 col-md-6 labelForm">
+                                    <label for="exampleFormControlInput1" class="form-label">Correo electronico</label>
+                                    <input type="text" class="form-control" id="exampleFormControlInput1"
+                                        placeholder="aaa@gmail.com">
+                                </div>
+                                <p id="errorCorreo"></p>
+                                <div class="mb-3 col-lg-3 col-md-6 labelForm">
+                                    <label for="inputAddress" class="form-label">Dirección</label>
+                                    <input type="text" class="form-control" id="inputAddress" placeholder="Av. Siempreviva 742">
+                                </div>
+                                <input id="btnPagar" class="m-2 p-1 botonForm" value="Finalizar compra" type="submit">
+                                <input class="m-2 p-1 botonForm" type="reset">
+                            </fieldset>
+                        </form>
+                        <div class="ContProdForm">
+                            <div id="compraProductos"></div>
+                            <h5 id="precioFinalForm"></h5>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </main>
 
-         <div>
-            <p class="ventas_propiedad1">
-                Campo en alquiler
-            </p>
-            <p class="ventas_propiedad2">
-                $30.000
-            </p>
-            <p class="ventas_propiedad3">
-                Ubicado sobre calle san martin
-            </p>
-            <img src="../img/ext3.png" class="img-fluid" alt="imagen de casa">
-    
-            <p>
-                Composición:
-            </p> 
-                <ul class="alquileres_lista">
-                    <li>cocina-comedor</li>
-                    <li>living</li>
-                    <li>baño</li>
-                    <li>tres dormitorios</li>
-                    <li>depósito</li>
-                    <li>cochera</li>
-                    <li>pileta</li>
-                    
-                </ul>
-            <p class="alquileres_servicios">
-                Servicios
-            </p>
-                <ul class="alquileres_lista">
-                    <li>agua corriente</li>
-                    <li>electricidad</li>
-                    <li>gas natural</li>
-                    <li>asfalto</li>
-                </ul>
-            </p>   
-         </div>
-
-            <div>
-            <p class="ventas_propiedad1">
-                Departamento en alquiler
-            </p>
-            <p class="ventas_propiedad2">
-                $30.000
-            </p>
-            <p class="ventas_propiedad3">
-                Ubicado sobre calle san martin
-            </p>
-            <img src="../img/ext4.png" class="img-fluid" alt="imagen de casa">
-            
-            <p class="alquileres_servicios">
-                Composición:
-            </p> 
-                <ul class="alquileres_lista">
-                    <li>cocina-comedor</li>
-                    <li>living</li>
-                    <li>baño</li>
-                    <li>tres dormitorios</li>
-                    <li>depósito</li>
-                    <li>cochera</li>
-                    <li>pileta</li>
-                    
-                </ul>
-            <p class="alquileres_servicios">
-                Servicios
-            </p>
-                <ul class="alquileres_lista">
-                    <li>agua corriente</li>
-                    <li>electricidad</li>
-                    <li>gas natural</li>
-                    <li>asfalto</li>
-                </ul>
-            </p>   
-            </div>
-            <section class="main">
-            </section>
-           
-           
-           
-
-        </section>
-        <section class="carrito">
-    
-        </section>
-        <div class="popupDetalle d-none">
-        </div>
         <footer class="pieDePaguina">
             <div class="logo_fin">
                 <img class="logo_fin1" src= "../img/LOGO GF PNG NEGRO (MARCA DE AGUA).png" alt="logo de inmobiliaria">
@@ -252,8 +148,12 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" 
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
        <!--link de jb propirdades--> 
-        <script src="../JS/alquileres.js" ></script>
-
+       <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="../JS/productos.js"type="module" ></script>
+        <script src="../JS/app.js"type="module" ></script>
+        <script src="../JS/carritoindex.js"type="module" ></script>
+        <script src="../JS/extras.js"type="module" ></script>
+        <script src="../JS/modal.js"type="module" ></script>
         <script src = " https://unpkg.com/sweetalert/dist/sweetalert.min.js " ></script> 
 
 </body>
